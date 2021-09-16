@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/learn_android_kts/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21354166666666666" />
+        <entry key="..\:/learn_android_kts/app/src/main/res/drawable/ic_android.xml" value="0.21354166666666666" />
         <entry key="..\:/learn_android_kts/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21354166666666666" />
-        <entry key="..\:/learn_android_kts/app/src/main/res/layout-land/activity_main.xml" value="0.16710758377425045" />
-        <entry key="..\:/learn_android_kts/app/src/main/res/layout/activity_main.xml" value="0.18333333333333332" />
+        <entry key="..\:/learn_android_kts/app/src/main/res/drawable/ic_unplash.xml" value="0.22" />
+        <entry key="..\:/learn_android_kts/app/src/main/res/layout-land/activity_main.xml" value="0.22" />
+        <entry key="..\:/learn_android_kts/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
   </component>

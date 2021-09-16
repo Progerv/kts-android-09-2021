@@ -7,16 +7,16 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    var textView: TextView? = null
+    private var textView: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textView = findViewById(R.id.text)
+        textView = findViewById(R.id.text_login)
 
         findViewById<Button>(R.id.click_my).setOnClickListener {
-            textView?.text = ""
+            textView?.text = getString(R.string.thanks)
         }
     }
 }
