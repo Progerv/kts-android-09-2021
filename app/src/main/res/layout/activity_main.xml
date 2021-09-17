@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:gravity="center_horizontal|center_vertical"
-    android:orientation="vertical"
-    android:background="@color/cardview_light_background">
+    android:background="@color/main_background"
+    android:orientation="vertical">
 
     <ImageView
         android:layout_margin="10dp"
@@ -18,15 +18,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome_back"
-        android:textColor="@color/black"
+        android:textColor="@color/color_text_welcome"
         android:layout_margin="10dp"
         android:textSize="20sp"/>
 
     <Button
         android:id="@+id/click_my"
         android:text="@string/button_text"
+        android:textColor="@color/color_text_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"/>
+        android:backgroundTint="@color/color_background_button"/>
 
 </LinearLayout>
