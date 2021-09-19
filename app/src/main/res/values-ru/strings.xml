@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Моё приложение</string>
+    <string name="button_text">Нажми на меня</string>
+    <string name="welcome_back">Возвращайся.</string>
+    <string name="thanks">Спасибо</string>
+    <string name="login">login</string>
+</resources>
