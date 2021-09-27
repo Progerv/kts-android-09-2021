@@ -1,4 +1,4 @@
-package com.khaymoev.myapplication.ui.main_page
+package com.khaymoev.myapplication.ui.main_page.adapter
 
 import android.view.LayoutInflater
 import android.view.View

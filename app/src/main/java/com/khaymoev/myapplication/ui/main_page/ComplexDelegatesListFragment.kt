@@ -34,12 +34,16 @@ class ComplexDelegatesListFragment : Fragment(R.layout.fragment_main) {
     private fun initList() {
         complexAdapter = ComplexDelegatesListAdapter(
             // Sharing
-            onSendEmail = { complexItem ->
-                val intent = Intent(Intent.ACTION_SENDTO).apply {
-                    data = Uri.parse("mailto:${complexItem.email}")
-                    putExtra(Intent.EXTRA_SUBJECT, complexItem.title)
-                }
-                startActivity(intent)
+//            onSendEmail = { complexItem ->
+//                val intent = Intent(Intent.ACTION_SENDTO).apply {
+//                    data = Uri.parse("mailto:${complexItem.email}")
+//                    putExtra(Intent.EXTRA_SUBJECT, complexItem.title)
+//                }
+//                startActivity(intent)
+//            }
+
+            onSendLike = { complexItem ->
+                complexItem.amountLike ++
             }
         )
         with(binding.list) {

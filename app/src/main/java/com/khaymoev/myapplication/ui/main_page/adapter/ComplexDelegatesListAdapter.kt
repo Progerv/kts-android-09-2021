@@ -1,24 +1,27 @@
 package com.khaymoev.myapplication.ui.main_page.adapter
 
 import android.annotation.SuppressLint
+import android.provider.SyncStateContract.Helpers.update
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 import com.khaymoev.myapplication.models.ArticleImageItem
 import com.khaymoev.myapplication.models.ArticleItem
-import com.khaymoev.myapplication.ui.main_page.ArticleImageItemDelegate
-import com.khaymoev.myapplication.ui.main_page.ArticleItemDelegate
-import com.khaymoev.myapplication.ui.main_page.PageLoadingAdapterDelegate
+import com.khaymoev.myapplication.ui.main_page.delegates.ArticleImageItemDelegate
+import com.khaymoev.myapplication.ui.main_page.delegates.ArticleItemDelegate
 
 /**
  * @author Vasiliy Khaymoev on 27.09.2021.
  */
 class ComplexDelegatesListAdapter(
-    onSendEmail: (item: ArticleItem) -> Unit
+//    onSendEmail: (item: ArticleItem) -> Unit
+    onSendLike: (item: ArticleItem) -> Unit
 ) : AsyncListDifferDelegationAdapter<Any>(ComplexDiffCallback()) {
 
     init {
         delegatesManager
-            .addDelegate(ArticleItemDelegate(onSendEmail))
+//            .addDelegate(ArticleItemDelegate(onSendEmail))
+            .addDelegate(ArticleItemDelegate(onSendLike))
             .addDelegate(ArticleImageItemDelegate(::removeItem))
             .addDelegate(PageLoadingAdapterDelegate())
     }
@@ -42,4 +45,11 @@ class ComplexDelegatesListAdapter(
         }
         items = newItems
     }
+
+//    private fun updateItem(item: Any) {
+//        val newItems = items.toMutableList().apply {
+//            remove(item)
+//        }
+//        items = newItems
+//    }
 }
