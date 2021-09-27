@@ -1,0 +1,107 @@
+hw-2
+
+Activity
+Debug
+
+2021-09-22 23:23:38.251 6643-6643/com.khaymoev.myapplication W/ActivityThread: Application com.khaymoev.myapplication is waiting for the debugger on port 8100...
+2021-09-22 23:23:38.251 6643-6643/com.khaymoev.myapplication W/ActivityThread: Application com.khaymoev.myapplication is waiting for the debugger on port 8100...
+2021-09-22 23:23:38.251 6643-6643/com.khaymoev.myapplication W/ActivityThread: Application com.khaymoev.myapplication is waiting for the debugger on port 8100...
+2021-09-22 23:23:41.484 6643-6643/com.khaymoev.myapplication D/MainActivity: onCreate 172445839
+2021-09-22 23:23:41.487 6643-6643/com.khaymoev.myapplication D/MainActivity: onStart 172445839
+2021-09-22 23:23:41.497 6643-6643/com.khaymoev.myapplication D/MainActivity: onResume 172445839
+2021-09-22 23:23:44.476 6643-6643/com.khaymoev.myapplication I/Timeline: Timeline: Activity_launch_request time:95598627 intent:Intent { cmp=com.khaymoev.myapplication/.SecondActivity }
+2021-09-22 23:23:44.498 6643-6643/com.khaymoev.myapplication D/MainActivity: onPause 172445839
+2021-09-22 23:23:44.627 6643-6643/com.khaymoev.myapplication D/SecondActivity: onStart 76388110
+2021-09-22 23:23:44.661 6643-6643/com.khaymoev.myapplication D/SecondActivity: onResume 76388110
+2021-09-22 23:23:45.038 6643-6643/com.khaymoev.myapplication D/MainActivity: onStop 172445839
+2021-09-22 23:23:55.666 6643-6643/com.khaymoev.myapplication D/SecondActivity: onPause 76388110
+2021-09-22 23:23:55.673 6643-6643/com.khaymoev.myapplication D/SecondActivity: onStop 76388110
+2021-09-22 23:23:55.677 6643-6643/com.khaymoev.myapplication D/SecondActivity: onDestroy 76388110
+2021-09-22 23:23:55.742 6643-6643/com.khaymoev.myapplication D/SecondActivity: onStart 104446191
+2021-09-22 23:23:55.772 6643-6643/com.khaymoev.myapplication D/SecondActivity: onResume 104446191
+2021-09-22 23:23:58.536 6643-6643/com.khaymoev.myapplication D/SecondActivity: onPause 104446191
+2021-09-22 23:23:58.543 6643-6643/com.khaymoev.myapplication D/SecondActivity: onStop 104446191
+2021-09-22 23:23:58.547 6643-6643/com.khaymoev.myapplication D/SecondActivity: onDestroy 104446191
+2021-09-22 23:23:58.609 6643-6643/com.khaymoev.myapplication D/SecondActivity: onStart 3753478
+2021-09-22 23:23:58.657 6643-6643/com.khaymoev.myapplication D/SecondActivity: onResume 3753478
+2021-09-22 23:24:02.200 6643-6643/com.khaymoev.myapplication D/SecondActivity: onPause 3753478
+2021-09-22 23:24:02.215 6643-6643/com.khaymoev.myapplication D/MainActivity: onStart 172445839
+2021-09-22 23:24:02.217 6643-6643/com.khaymoev.myapplication D/MainActivity: onResume 172445839
+2021-09-22 23:24:02.611 6643-6643/com.khaymoev.myapplication D/SecondActivity: onStop 3753478
+2021-09-22 23:24:02.615 6643-6643/com.khaymoev.myapplication D/SecondActivity: onDestroy 3753478
+2021-09-22 23:24:10.306 6643-6643/com.khaymoev.myapplication D/MainActivity: onPause 172445839
+2021-09-22 23:24:10.740 6643-6643/com.khaymoev.myapplication D/MainActivity: onStop 172445839
+2021-09-22 23:24:10.745 6643-6643/com.khaymoev.myapplication D/MainActivity: onDestroy 172445839
+
+
+
+
+
+Fragment
+Debug
+
+2021-09-22 23:28:04.339 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onAttach 223570393
+2021-09-22 23:28:04.341 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onCreate 223570393
+2021-09-22 23:28:04.349 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onCreateView 223570393
+2021-09-22 23:28:04.419 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onViewCreated 223570393
+2021-09-22 23:28:04.422 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onActivityCreated 223570393
+2021-09-22 23:28:04.423 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onViewStateRestored 223570393
+2021-09-22 23:28:04.429 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onStart 223570393
+2021-09-22 23:28:04.444 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onResume 223570393
+2021-09-22 23:28:20.413 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onPause 223570393
+2021-09-22 23:28:20.414 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onStop 223570393
+2021-09-22 23:28:20.416 8278-8278/com.khaymoev.myapplication D/LoginFragment: onAttach 170050399
+2021-09-22 23:28:20.417 8278-8278/com.khaymoev.myapplication D/LoginFragment: onCreate 170050399
+2021-09-22 23:28:20.418 8278-8278/com.khaymoev.myapplication D/LoginFragment: onCreateView 170050399
+2021-09-22 23:28:20.563 8278-8278/com.khaymoev.myapplication D/LoginFragment: onViewCreated 170050399
+2021-09-22 23:28:20.572 8278-8278/com.khaymoev.myapplication D/LoginFragment: onActivityCreated 170050399
+2021-09-22 23:28:20.572 8278-8278/com.khaymoev.myapplication D/LoginFragment: onViewStateRestored 170050399
+2021-09-22 23:28:20.574 8278-8278/com.khaymoev.myapplication D/LoginFragment: onStart 170050399
+2021-09-22 23:28:20.582 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onDestroyView 223570393
+2021-09-22 23:28:20.584 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onDestroy 223570393
+2021-09-22 23:28:20.585 8278-8278/com.khaymoev.myapplication D/OnBoardingFragment: onDetach 223570393
+2021-09-22 23:28:20.587 8278-8278/com.khaymoev.myapplication D/LoginFragment: onResume 170050399
+2021-09-22 23:28:50.496 8278-8278/com.khaymoev.myapplication D/LoginFragment: onPause 170050399
+2021-09-22 23:28:50.499 8278-8278/com.khaymoev.myapplication D/LoginFragment: onStop 170050399
+2021-09-22 23:28:50.502 8278-8278/com.khaymoev.myapplication D/MainFragment: onAttach 243617634
+2021-09-22 23:28:50.503 8278-8278/com.khaymoev.myapplication D/MainFragment: onCreate 243617634
+2021-09-22 23:28:50.504 8278-8278/com.khaymoev.myapplication D/MainFragment: onCreateView 243617634
+2021-09-22 23:28:50.513 8278-8278/com.khaymoev.myapplication D/MainFragment: onViewCreated 243617634
+2021-09-22 23:28:50.515 8278-8278/com.khaymoev.myapplication D/MainFragment: onActivityCreated 243617634
+2021-09-22 23:28:50.516 8278-8278/com.khaymoev.myapplication D/MainFragment: onViewStateRestored 243617634
+2021-09-22 23:28:50.517 8278-8278/com.khaymoev.myapplication D/MainFragment: onStart 243617634
+2021-09-22 23:28:50.526 8278-8278/com.khaymoev.myapplication D/LoginFragment: onDestroyView 170050399
+2021-09-22 23:28:50.529 8278-8278/com.khaymoev.myapplication D/LoginFragment: onDestroy 170050399
+2021-09-22 23:28:50.530 8278-8278/com.khaymoev.myapplication D/LoginFragment: onDetach 170050399
+2021-09-22 23:28:50.532 8278-8278/com.khaymoev.myapplication D/MainFragment: onResume 243617634
+2021-09-22 23:28:59.343 8278-8278/com.khaymoev.myapplication D/MainFragment: onPause 243617634
+2021-09-22 23:28:59.361 8278-8278/com.khaymoev.myapplication D/MainFragment: onStop 243617634
+2021-09-22 23:28:59.368 8278-8278/com.khaymoev.myapplication D/MainFragment: onDestroyView 243617634
+2021-09-22 23:28:59.371 8278-8278/com.khaymoev.myapplication D/MainFragment: onDestroy 243617634
+2021-09-22 23:28:59.372 8278-8278/com.khaymoev.myapplication D/MainFragment: onDetach 243617634
+2021-09-22 23:28:59.417 8278-8278/com.khaymoev.myapplication D/MainFragment: onAttach 210023569
+2021-09-22 23:28:59.419 8278-8278/com.khaymoev.myapplication D/MainFragment: onCreate 210023569
+2021-09-22 23:28:59.466 8278-8278/com.khaymoev.myapplication D/MainFragment: onCreateView 210023569
+2021-09-22 23:28:59.473 8278-8278/com.khaymoev.myapplication D/MainFragment: onViewCreated 210023569
+2021-09-22 23:28:59.475 8278-8278/com.khaymoev.myapplication D/MainFragment: onActivityCreated 210023569
+2021-09-22 23:28:59.475 8278-8278/com.khaymoev.myapplication D/MainFragment: onViewStateRestored 210023569
+2021-09-22 23:28:59.479 8278-8278/com.khaymoev.myapplication D/MainFragment: onStart 210023569
+2021-09-22 23:28:59.494 8278-8278/com.khaymoev.myapplication D/MainFragment: onResume 210023569
+2021-09-22 23:29:03.334 8278-8278/com.khaymoev.myapplication D/MainFragment: onPause 210023569
+2021-09-22 23:29:03.344 8278-8278/com.khaymoev.myapplication D/MainFragment: onStop 210023569
+2021-09-22 23:29:03.350 8278-8278/com.khaymoev.myapplication D/MainFragment: onDestroyView 210023569
+2021-09-22 23:29:03.352 8278-8278/com.khaymoev.myapplication D/MainFragment: onDestroy 210023569
+2021-09-22 23:29:03.353 8278-8278/com.khaymoev.myapplication D/MainFragment: onDetach 210023569
+2021-09-22 23:29:03.388 8278-8278/com.khaymoev.myapplication D/MainFragment: onAttach 258699248
+2021-09-22 23:29:03.389 8278-8278/com.khaymoev.myapplication D/MainFragment: onCreate 258699248
+2021-09-22 23:29:03.435 8278-8278/com.khaymoev.myapplication D/MainFragment: onCreateView 258699248
+2021-09-22 23:29:03.441 8278-8278/com.khaymoev.myapplication D/MainFragment: onViewCreated 258699248
+2021-09-22 23:29:03.444 8278-8278/com.khaymoev.myapplication D/MainFragment: onActivityCreated 258699248
+2021-09-22 23:29:03.444 8278-8278/com.khaymoev.myapplication D/MainFragment: onViewStateRestored 258699248
+2021-09-22 23:29:03.448 8278-8278/com.khaymoev.myapplication D/MainFragment: onStart 258699248
+2021-09-22 23:29:03.460 8278-8278/com.khaymoev.myapplication D/MainFragment: onResume 258699248
+2021-09-22 23:29:09.346 8278-8278/com.khaymoev.myapplication D/MainFragment: onPause 258699248
+2021-09-22 23:29:09.824 8278-8278/com.khaymoev.myapplication D/MainFragment: onStop 258699248
+2021-09-22 23:29:09.836 8278-8278/com.khaymoev.myapplication D/MainFragment: onDestroyView 258699248
+2021-09-22 23:29:09.846 8278-8278/com.khaymoev.myapplication D/MainFragment: onDestroy 258699248
+2021-09-22 23:29:09.847 8278-8278/com.khaymoev.myapplication D/MainFragment: onDetach 258699248

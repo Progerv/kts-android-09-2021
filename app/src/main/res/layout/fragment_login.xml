@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    tools:context=".ui.login.LoginFragment">
+
+    <ImageView
+        android:id="@+id/ic_unplash_image"
+        android:layout_marginTop="5dp"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/ic"
+        android:src="@drawable/ic_unplash_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textEmailView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email_text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmailView"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailView" />
+
+    <EditText
+        android:id="@+id/editTextEmailView"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey"
+
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ic_unplash_image" />
+
+    <TextView
+        android:id="@+id/textPasswordView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_text"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPasswordView"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordView" />
+
+    <EditText
+        android:id="@+id/editTextPasswordView"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/grey"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmailView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailView" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:enabled="false"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/login"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordView"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

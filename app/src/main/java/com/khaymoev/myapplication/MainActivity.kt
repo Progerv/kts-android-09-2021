@@ -1,22 +1,40 @@
 package com.khaymoev.myapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
-
-    private var textView: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textView = findViewById(R.id.text_login)
+        Timber.d("onCreate ${hashCode()}")
+    }
 
-        findViewById<Button>(R.id.click_my).setOnClickListener {
-            textView?.text = getString(R.string.thanks)
-        }
+    override fun onStart() {
+        super.onStart()
+        Timber.d("onStart ${hashCode()}")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Timber.d("onPause ${hashCode()}")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Timber.d("onResume ${hashCode()}")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Timber.d("onStop ${hashCode()}")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Timber.d("onDestroy ${hashCode()}")
     }
 }
