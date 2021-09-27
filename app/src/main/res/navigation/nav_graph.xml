@@ -33,7 +33,7 @@
     </fragment>
 
     <fragment
-        android:name="com.khaymoev.myapplication.ui.mainpage.MainFragment"
+        android:name="com.khaymoev.myapplication.ui.main_page.MainFragment"
         android:id="@+id/mainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main"/>
