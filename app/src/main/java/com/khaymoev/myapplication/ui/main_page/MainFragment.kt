@@ -43,6 +43,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             val randomUUID = UUID.randomUUID()
             when ((1..2).random()) {
                 1 -> ArticleItem(
+                    uuid = randomUUID,
                     title = "Самый обыкновенный заголовок",
                     amountLike = (1..1000).random(),
                     author = "Автор: Хаймоев Василий"
