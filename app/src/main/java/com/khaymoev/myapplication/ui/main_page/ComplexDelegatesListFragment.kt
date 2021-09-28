@@ -3,7 +3,6 @@ package com.khaymoev.myapplication.ui.main_page
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -18,6 +17,7 @@ import com.khaymoev.myapplication.models.LoadingItem
 import com.khaymoev.myapplication.ui.main_page.adapter.ComplexDelegatesListAdapter
 import com.khaymoev.myapplication.utils.PaginationScrollListener
 import com.khaymoev.myapplication.utils.autoCleared
+import timber.log.Timber
 import java.util.*
 
 class ComplexDelegatesListFragment : Fragment(R.layout.fragment_main) {
@@ -33,25 +33,25 @@ class ComplexDelegatesListFragment : Fragment(R.layout.fragment_main) {
 
     private fun initList() {
         complexAdapter = ComplexDelegatesListAdapter(
-            // Sharing
-//            onSendEmail = { complexItem ->
-//                val intent = Intent(Intent.ACTION_SENDTO).apply {
-//                    data = Uri.parse("mailto:${complexItem.email}")
-//                    putExtra(Intent.EXTRA_SUBJECT, complexItem.title)
-//                }
-//                startActivity(intent)
-//            }
 
-            onSendLike = { complexItem ->
-                complexItem.amountLike ++
+            onSendLike = { item ->
+                when (item) {
+                    is ArticleItem -> {
+                        item.amountLike += 1
+                    }
+                }
+                complexAdapter.notifyDataSetChanged()
+            },
+            onOpenUnplashSite = {
+                openUnsplashSite()
             }
+
         )
         with(binding.list) {
             val orientation = RecyclerView.VERTICAL
             adapter = complexAdapter
             layoutManager = LinearLayoutManager(context, orientation, false)
 
-            // Pagination
             addOnScrollListener(
                 PaginationScrollListener(
                     layoutManager = layoutManager as LinearLayoutManager,
@@ -72,8 +72,7 @@ class ComplexDelegatesListFragment : Fragment(R.layout.fragment_main) {
                 uuid = randomUUID,
                 title = "Самый обыкновенный заголовок",
                 amountLike = (1..1000).random(),
-                author = "Автор: Хаймоев Василий",
-                email = "Vasilii435@yandex.ru"
+                author = "Автор: Хаймоев Василий"
             )
             2 -> ArticleImageItem(
                 title = "Самый обыкновенный заголовок картинки",
@@ -91,6 +90,19 @@ class ComplexDelegatesListFragment : Fragment(R.layout.fragment_main) {
             }
         } + getDefaultItems() + LoadingItem()
         complexAdapter.items = newItems
-        Log.d("Pagination", newItems.size.toString())
+    }
+
+    private fun openUnsplashSite() {
+        val intent = Intent(Intent.ACTION_VIEW).apply {
+            data = Uri.parse("https://unsplash.com")
+        }
+
+        val packageManager = requireActivity().packageManager
+        if (intent.resolveActivity(packageManager) != null) {
+            startActivity(intent)
+        }
+        else {
+            Timber.d("No Intent available to handle action")
+        }
     }
 }

@@ -7,6 +7,5 @@ data class ArticleItem(
     val title: String,
     var amountLike: Int,
     val author: String,
-    val uuid: UUID,
-    val email: String = ""
+    val uuid: UUID
 )

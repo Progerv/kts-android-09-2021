@@ -47,7 +47,6 @@ class ArticleItemDelegate(
             title.text = item.title
             amountLike.text = item.amountLike.toString()
             author.text = item.author
-            email.text = item.email
         }
     }
 }

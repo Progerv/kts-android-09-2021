@@ -1,9 +1,7 @@
 package com.khaymoev.myapplication.ui.main_page.adapter
 
 import android.annotation.SuppressLint
-import android.provider.SyncStateContract.Helpers.update
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.RecyclerView
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 import com.khaymoev.myapplication.models.ArticleImageItem
 import com.khaymoev.myapplication.models.ArticleItem
@@ -14,15 +12,14 @@ import com.khaymoev.myapplication.ui.main_page.delegates.ArticleItemDelegate
  * @author Vasiliy Khaymoev on 27.09.2021.
  */
 class ComplexDelegatesListAdapter(
-//    onSendEmail: (item: ArticleItem) -> Unit
-    onSendLike: (item: ArticleItem) -> Unit
+    onSendLike: (item: Any) -> Unit,
+    onOpenUnplashSite: (item: ArticleImageItem) -> Unit
 ) : AsyncListDifferDelegationAdapter<Any>(ComplexDiffCallback()) {
 
     init {
         delegatesManager
-//            .addDelegate(ArticleItemDelegate(onSendEmail))
             .addDelegate(ArticleItemDelegate(onSendLike))
-            .addDelegate(ArticleImageItemDelegate(::removeItem))
+            .addDelegate(ArticleImageItemDelegate(onOpenUnplashSite))
             .addDelegate(PageLoadingAdapterDelegate())
     }
 
@@ -39,17 +36,12 @@ class ComplexDelegatesListAdapter(
         override fun areContentsTheSame(first: Any, second: Any): Boolean = first == second
     }
 
+    /*
     private fun removeItem(item: Any) {
         val newItems = items.toMutableList().apply {
             remove(item)
         }
         items = newItems
     }
-
-//    private fun updateItem(item: Any) {
-//        val newItems = items.toMutableList().apply {
-//            remove(item)
-//        }
-//        items = newItems
-//    }
+    */
 }
