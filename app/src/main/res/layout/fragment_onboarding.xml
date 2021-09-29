@@ -19,14 +19,14 @@
         android:id="@+id/text_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome_back"
+        android:text="@string/welcome_back_fragment_on_boarding_text"
         android:textColor="@color/color_text_welcome"
         android:layout_margin="10dp"
         android:textSize="20sp"/>
 
     <Button
         android:id="@+id/click_my"
-        android:text="@string/button_text"
+        android:text="@string/button_text_on_boarding_fragment"
         android:textColor="@color/color_text_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
