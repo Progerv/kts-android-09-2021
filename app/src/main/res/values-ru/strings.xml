@@ -7,4 +7,5 @@
     <string name="login_fragment_login_text_button">ВХОД</string>
     <string name="ic">ic</string>
     <string name="password_text_fragment_login_text">Пароль</string>
+    <string name="skip_on_boarding_fragment_text">Пропустить</string>
 </resources>

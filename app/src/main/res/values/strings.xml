@@ -9,4 +9,5 @@
     <string name="password_fragment_login_edit_text">Password</string>
     <string name="login_fragment_login_text_button">LOGIN</string>
     <string name="ic">ic</string>
+    <string name="skip_on_boarding_fragment_text">Skip</string>
 </resources>
