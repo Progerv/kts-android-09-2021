@@ -13,4 +13,8 @@
     <color name="color_text_welcome">#000000</color>
     <color name="color_background_button">#000000</color>
     <color name="color_text_button">#FFFFFF</color>
+
+    <color name="black87">#de000000</color>
+    <color name="black54">#8a000000</color>
+    <color name="dimgray">#6b6b6b</color>
 </resources>

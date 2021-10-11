@@ -1,4 +1,4 @@
-package com.khaymoev.myapplication.other
+package com.khaymoev.myapplication.utils
 
 import android.view.Window
 import androidx.core.view.WindowInsetsCompat

@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
     tools:context=".ui.login.LoginFragment">
 
@@ -23,7 +22,7 @@
         android:id="@+id/textEmailView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email_text"
+        android:text="@string/email_text_fragment_login_text"
         app:layout_constraintBottom_toTopOf="@+id/editTextEmailView"
         app:layout_constraintStart_toStartOf="@+id/editTextEmailView" />
 
@@ -34,7 +33,7 @@
         android:layout_marginTop="10dp"
         android:background="@color/grey"
 
-        android:hint="@string/email"
+        android:hint="@string/email_fragment_login_email_hint"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +43,7 @@
         android:id="@+id/textPasswordView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/password_text"
+        android:text="@string/password_text_fragment_login_text"
         app:layout_constraintBottom_toTopOf="@+id/editTextPasswordView"
         app:layout_constraintStart_toStartOf="@+id/editTextPasswordView" />
 
@@ -54,7 +53,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:background="@color/grey"
-        android:hint="@string/password"
+        android:hint="@string/password_fragment_login_edit_text"
         android:inputType="textPassword"
 
         app:layout_constraintEnd_toEndOf="@+id/editTextEmailView"
@@ -68,7 +67,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="@string/login"
+        android:text="@string/login_fragment_login_text_button"
         android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/editTextPasswordView"
         app:layout_constraintStart_toStartOf="@+id/editTextPasswordView"

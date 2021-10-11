@@ -1,10 +1,7 @@
 package com.khaymoev.myapplication.ui.login
 
-import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import androidx.core.widget.doAfterTextChanged
@@ -15,42 +12,39 @@ import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.khaymoev.myapplication.R
 import com.khaymoev.myapplication.databinding.FragmentLoginBinding
-import com.khaymoev.myapplication.other.hideKeyboard
-import timber.log.Timber
+import com.khaymoev.myapplication.utils.hideKeyboard
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
 
-    private val bindingView: FragmentLoginBinding by viewBinding()
+    private val binding: FragmentLoginBinding by viewBinding(FragmentLoginBinding::bind)
 
     private val loginViewModel: LoginViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Timber.d("onViewCreated ${hashCode()}")
+        initButtons()
 
-        initButton()
+        setUsernameTextChangedListener(binding.editTextEmailView, binding.editTextPasswordView)
 
-        setUsernameTextChangedListener(bindingView.editTextEmailView, bindingView.editTextPasswordView)
+        setPasswordTextChangedListener(binding.editTextEmailView, binding.editTextPasswordView)
 
-        setPasswordTextChangedListener(bindingView.editTextEmailView, bindingView.editTextPasswordView)
-
-        setPasswordEditorActionListener(bindingView.editTextPasswordView)
+        setPasswordEditorActionListener(binding.editTextPasswordView)
 
         loginViewModel.loginValidData.observe(viewLifecycleOwner,
             Observer { loginFormState ->
                 if (loginFormState == null) {
                     return@Observer
                 }
-                bindingView.loginButton.isEnabled = loginFormState
+                binding.loginButton.isEnabled = loginFormState
             }
         )
 
     }
 
-    private fun initButton() {
+    private fun initButtons() {
 
-        bindingView.loginButton.setOnClickListener {
+        binding.loginButton.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMainFragment())
         }
     }
@@ -81,69 +75,5 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             }
             false
         }
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Timber.d("onAttach ${hashCode()}")
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Timber.d("onCreate ${hashCode()}")
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        Timber.d("onCreateView ${hashCode()}")
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        Timber.d("onActivityCreated ${hashCode()}")
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Timber.d("onStart ${hashCode()}")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Timber.d("onResume ${hashCode()}")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Timber.d("onPause ${hashCode()}")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Timber.d("onStop ${hashCode()}")
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        Timber.d("onDestroyView ${hashCode()}")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Timber.d("onDestroy ${hashCode()}")
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        Timber.d("onDetach ${hashCode()}")
-    }
-
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
-        Timber.d("onViewStateRestored ${hashCode()}")
     }
 }

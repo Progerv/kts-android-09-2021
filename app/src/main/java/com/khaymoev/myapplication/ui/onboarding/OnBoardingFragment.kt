@@ -1,102 +1,25 @@
 package com.khaymoev.myapplication.ui.onboarding
 
-import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.khaymoev.myapplication.R
-import com.khaymoev.myapplication.databinding.FragmentOnboardingBinding
-import timber.log.Timber
+import com.khaymoev.myapplication.databinding.FragmentOnBoardingBinding
+import com.khaymoev.myapplication.view_page_adapter.ViewPagerAdapter
+import kotlinx.android.synthetic.main.fragment_on_boarding.*
 
-class OnBoardingFragment : Fragment(R.layout.fragment_onboarding) {
+class OnBoardingFragment: Fragment(R.layout.fragment_on_boarding) {
 
-    private val bindingView: FragmentOnboardingBinding by viewBinding()
+    private val binding: FragmentOnBoardingBinding by viewBinding(FragmentOnBoardingBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initButton()
+        viewPager2.adapter = ViewPagerAdapter()
 
-        Timber.d("onViewCreated ${hashCode()}")
+        val indicator = binding.indicator
+        indicator.attachToPager(viewPager2)
 
-    }
-
-    private fun initButton() {
-        bindingView.clickMy.setOnClickListener {
-            findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToLoginFragment())
-        }
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Timber.d("onAttach ${hashCode()}")
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Timber.d("onCreate ${hashCode()}")
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        Timber.d("onCreateView ${hashCode()}")
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        Timber.d("onActivityCreated ${hashCode()}")
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Timber.d("onStart ${hashCode()}")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Timber.d("onResume ${hashCode()}")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Timber.d("onPause ${hashCode()}")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Timber.d("onStop ${hashCode()}")
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        Timber.d("onDestroyView ${hashCode()}")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Timber.d("onDestroy ${hashCode()}")
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        Timber.d("onDetach ${hashCode()}")
-    }
-
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
-        Timber.d("onViewStateRestored ${hashCode()}")
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        Timber.d("onSaveInstanceState ${hashCode()}")
     }
 }

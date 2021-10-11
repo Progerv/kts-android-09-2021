@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="button_text">Нажми на меня</string>
-    <string name="welcome_back">Возвращайся</string>
-    <string name="thanks">Спасибо</string>
-    <string name="password">Пароль</string>
-    <string name="login">ВХОД</string>
+    <string name="button_text_on_boarding_fragment">Нажми на меня</string>
+    <string name="welcome_back_fragment_on_boarding_text">Возвращайся</string>
+    <string name="thanks_fragment_on_boarding_text">Спасибо</string>
+    <string name="password_fragment_login_edit_text">Пароль</string>
+    <string name="login_fragment_login_text_button">ВХОД</string>
     <string name="ic">ic</string>
-    <string name="password_text">Пароль</string>
+    <string name="password_text_fragment_login_text">Пароль</string>
+    <string name="skip_on_boarding_fragment_text">Пропустить</string>
 </resources>
